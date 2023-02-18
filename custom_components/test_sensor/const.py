@@ -1,0 +1,1 @@
+DOMAIN = "test_sensor"
