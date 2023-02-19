@@ -45,7 +45,7 @@ class TestSensor(Entity):
 
     def __init__(self, hass: HomeAssistantType, config):
         """Initialize the sensor"""
-        super().__init__(config)
+        # super().__init__(config)
         self.hass = hass
         self._name = config[CONF_NAME]
         self._sensor_entity = config[CONF_ENTITY]
