@@ -1,5 +1,5 @@
 {
-  "codeowners": ["Aephir"],
+  "codeowners": ["@Aephir"],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/Aephir/ha-test-integration",

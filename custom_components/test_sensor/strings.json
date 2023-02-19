@@ -1,0 +1,18 @@
+{
+  "config": {
+    "error": {
+      "1": "Error 1",
+      "2": "Error 2"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "entity": "Entity ID",
+          "name": "Name of entity"
+        },
+        "description": "Enter an entity ID and a name...",
+        "title": "Entity to use"
+      }
+    }
+  }
+}
