@@ -45,7 +45,7 @@ class TestSensor(Entity):
 
     def __init__(self, hass: HomeAssistantType, config):
         """Initialize the sensor"""
-        # super().__init__(config)
+        # super().__init__()  # Inherits from the `hass` class?
         self.hass = hass
         self._name = config[CONF_NAME]
         self._sensor_entity = config[CONF_ENTITY]
@@ -79,5 +79,5 @@ class TestSensor(Entity):
         """Update all sensors."""
         self._state = 100
         self.attrs["dummy_attribute"] = "dummy"
-        self.attrs["input_sensor_state"] = self._sensor_entity
+        self.attrs["input_sensor"] = self._sensor_entity
         self.attrs["input_sensor_state"] = self._sensor_entity.state
