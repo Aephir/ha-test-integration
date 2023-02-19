@@ -78,6 +78,6 @@ class TestSensor(Entity):
     async def async_update(self) -> None:
         """Update all sensors."""
         self._state = 100
-        self.attrs["dummy_attribute"] = "dummy_attribute"
+        self.attrs["dummy_attribute"] = "dummy"
         self.attrs["input_sensor"] = self._sensor_entity
         # self.attrs["input_sensor_state"] = self._sensor_entity.state
