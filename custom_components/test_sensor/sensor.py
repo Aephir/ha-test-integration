@@ -70,6 +70,10 @@ class TestSensor(Entity):
         _LOGGER.debug("Unique ID is: " + unique_id)
         return unique_id
 
+    @property
+    def extra_state_attributes(self):
+        return self.attrs
+
     async def async_update(self) -> None:
         """Update all sensors."""
         self._state = 100
