@@ -45,6 +45,7 @@ class TestSensor(Entity):
 
     def __init__(self, hass: HomeAssistantType, config):
         """Initialize the sensor"""
+        super().__init__(config)
         self.hass = hass
         self._name = config[CONF_NAME]
         self._sensor_entity = config[CONF_ENTITY]
@@ -79,3 +80,4 @@ class TestSensor(Entity):
         self._state = 100
         self.attrs["dummy_attribute"] = "dummy"
         self.attrs["input_sensor_state"] = self._sensor_entity
+        self.attrs["input_sensor_state"] = self._sensor_entity.state
