@@ -62,7 +62,7 @@ class TestSensor(Entity):
     @property
     def state(self):
         """Return the name of the sensor."""
-        return self._name
+        return self._state
 
     @property
     def unique_id(self):
