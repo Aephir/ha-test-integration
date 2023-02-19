@@ -80,4 +80,5 @@ class TestSensor(Entity):
         self._state = 100
         self.attrs["dummy_attribute"] = "dummy"
         self.attrs["input_sensor"] = self._sensor_entity
-        self.attrs["input_sensor_state"] = self.hass.states.get(self._sensor_entity)
+        self.attrs["input_sensor_state"] = self.hass.states.get(self._sensor_entity)["state"]
+        self.attrs["input_sensor_attributes"] = self.hass.states.get(self._sensor_entity)["attributes"]
