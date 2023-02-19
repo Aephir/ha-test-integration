@@ -1,9 +1,5 @@
 {
   "config": {
-    "error": {
-      "1": "Error 1",
-      "2": "Error 2"
-    },
     "step": {
       "user": {
         "data": {
@@ -13,6 +9,13 @@
         "description": "Enter an entity ID and a name...",
         "title": "Entity to use"
       }
+    },
+    "error": {
+      "1": "Error 1",
+      "2": "Error 2"
+    },
+    "abort": {
+      "already_configured": "Integration already configured for device/entity/something"
     }
   }
 }
