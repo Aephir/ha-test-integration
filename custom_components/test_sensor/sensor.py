@@ -20,9 +20,9 @@ _LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_entry(
-    hass: core.HomeAssistant,
-    config_entry: config_entries.ConfigEntry,
-    async_add_entities,
+        hass: core.HomeAssistant,
+        config_entry: config_entries.ConfigEntry,
+        async_add_entities,
 ) -> None:
     """Setup sensors from a config entry created in the integrations UI."""
     config = hass.data[DOMAIN][config_entry.entry_id]
@@ -31,10 +31,10 @@ async def async_setup_entry(
 
 
 async def async_setup_platform(
-    hass: HomeAssistantType,
-    config: ConfigType,
-    async_add_entities: Callable,
-    discovery_info: DiscoveryInfoType | None = None,
+        hass: HomeAssistantType,
+        config: ConfigType,
+        async_add_entities: Callable,
+        discovery_info: DiscoveryInfoType | None = None,
 ) -> None:
     """Set up the sensor platform."""
     sensors = [TestSensor(hass, config)]
@@ -49,6 +49,7 @@ class TestSensor(Entity):
         self.hass = hass
         self._name = config[CONF_NAME]
         self._sensor_entity = config[CONF_ENTITY]
+        _LOGGER.error(self._sensor_entity)
 
         self._state = None
         self.attrs = {}
